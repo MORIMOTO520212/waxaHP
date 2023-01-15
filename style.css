@@ -362,68 +362,43 @@ main {
 
 
 /*-----------------------------------------------
-Information
+歴史
 -----------------------------------------------*/
 
-#information {
+#history {
     width: 100%;
     background: rgb(0, 0, 0);
     padding: 60px 0;
 }
 
-#information .container {
+#history .container {
     flex-wrap: wrap-reverse;
 }
 
-#information .contents h2,
-
-#information .contents p, table {
+#history .contents h2,
+#history .contents p {
     color: rgb(255, 255, 255);
 }
 
-#information .images {
+#history .images {
     display: flex;
     justify-content: center;
     grid-gap: 10px;
     margin: 0 auto;
 }
 
-#information .images div {
+#history .images div {
     width: 180px;
     height: 390px;
     background: rgb(224, 150, 150);
 }
 
-#information .images div img {
+#history .images div img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-#information .contents table {
-    border-collapse: collapse;
-    width: 95%;
-    height: 100%;
-    text-align:left;/*左揃え*/
-}
-/* 棒線を表示する */
-#information .contents table tr {
-    border-top: #eceef3 solid 1px;
-    margin-top: 20px;
-}
-/* 一番下棒線を表示 */
-#information .contents table tr:last-child {
-    border-bottom: #eceef3 solid 1px;
-}
 
-#information .contents table th {
-    padding-left: 1.4rem;
-}
-
-/* informationの行の間隔 */
-#information .contents table tr td {
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
 
 /*-----------------------------------------------
 活動風景
@@ -540,31 +515,31 @@ Information
     width: 50px;
 }
 
-.swiper-button-prev,
-.swiper-button-next {
-    background-size: 50px 50px;
+
+/* 矢印を消す、画像に変更 */
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    content: "";
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50px;
+    width: 50px;
+    margin: auto;
 }
 
 
 /* 前に戻る画像パス */
 
-.swiper-button-prev {
-    background-image: url(src/page-prev.png);
+.swiper-button-prev:after {
+    background-image: url(src/page-next.png);
 }
 
 
 /* 次に進む画像パス */
 
-.swiper-button-next {
-    background-image: url(src/page-next.png);
-}
-
-.swiper-button-next {
-    right: 15px;
-}
-
-.swiper-button-prev {
-    left: 15px;
+.swiper-button-next:after {
+    background-image: url(src/page-prev.png);
 }
 
 
@@ -980,77 +955,14 @@ PC表示
         max-width: 100%;
     }
     /*-----------------------------------------------
-    Information
+    歴史
     -----------------------------------------------*/
-    #information {
-        width: 100%;
-        background: rgb(0, 0, 0);
-        padding: 60px 0;
-    }
-    
-    #information .container {
-        flex-wrap: wrap-reverse;
-    }
-    
-    #information .contents h2,
-    #information .contents p, table {
-        color: rgb(255, 255, 255);
-    }
-
-    table {
-        border-collapse: collapse;
-        width:100%;
-    }
-
-    table :last-child{
-        border-bottom: 1px solid #FFFFFF;
-    }
-
-    #information table tr {
-
-    }
-    #information table th {
-        border-top: 1px solid white;
-        font-weight: 700;
-        font-size: 1.4rem;
-    }
-
-
-    #information table td {
-        padding: 23px;
-        border-top: 1px solid white;
-        font-weight: 400;
-        font-size: 1.4rem;
-
-    }
-    
-    
-    #information .images {
-        display: flex;
-        justify-content: center;
-        grid-gap: 10px;
-        margin: 0 auto;
-    }
-    
-    #information .images div {
-        width: 180px;
-        height: 390px;
-        background: rgb(224, 150, 150);
-    }
-    
-    #information .images div img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    
-
     /*-----------------------------------------------
     活動風景
     -----------------------------------------------*/
     .swiper-slide {
         color: #ffffff;
-        width: 414px;
+        width: 653px;
         height: 100%;
         text-align: center;
     }
@@ -1058,10 +970,10 @@ PC表示
         display: block;
     }
     .swiper-button-prev {
-        top: 38%;
+        top: 36%;
     }
     .swiper-button-next {
-        top: 38%;
+        top: 36%;
     }
     /*-----------------------------------------------
     活動場所

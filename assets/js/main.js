@@ -4,14 +4,13 @@ var mySwiper = new Swiper('.swiper-container', {
     loop: true,
     autoHeight: true,
 
-    slidesPerView: 'auto',
+    slidesPerView: 3.4,
     spaceBetween: 10,
     centeredSlides: true,
     breakpoints: {
         767: {
             spaceBetween: vw,
             slidesPerView: 1,
-            slidesPerView: 'auto',
         }
     },
     autoplay: {
